@@ -9,6 +9,12 @@ import AdvancedTopics from "./components/AdvancedTopics";
 import Leaderboard from "./components/Leaderboard";
 import Games from "./components/Games";
 import GameInterface from "./components/GameInterface";
+import TechQuiz from "./components/TechQuiz";
+import QuizInterface from "./components/QuizInterface";
+import TechNews from "./components/TechNews";
+import NewsDetail from "./components/NewsDetail";
+import NewsRegistration from "./components/NewsRegistration";
+import NewsUpdate from "./components/NewsUpdate";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 
@@ -52,6 +58,13 @@ function App() {
             <Route path="/leaderboard" element={user ? <Leaderboard /> : <Navigate to="/login" />} />
             <Route path="/games" element={user ? <Games /> : <Navigate to="/login" />} />
             <Route path="/games/:gameName" element={user ? <GameInterface /> : <Navigate to="/login" />} />
+            <Route path="/tech-quiz" element={user ? <TechQuiz /> : <Navigate to="/login" />} />
+            <Route path="/tech-quiz/:quizName" element={user ? <QuizInterface /> : <Navigate to="/login" />} />
+            <Route path="/tech-news" element={user ? <TechNews /> : <Navigate to="/login" />} />
+            <Route path="/tech-news/:newsId" element={user ? <NewsDetail /> : <Navigate to="/login" />} />
+            <Route path="/tech-news/register/:newsId" element={user ? <NewsRegistration /> : <Navigate to="/login" />} />
+            <Route path="/tech-news/update" element={user ? <NewsUpdate /> : <Navigate to="/login" />} />
+            <Route path="/tech-news/update/:newsId" element={user ? <NewsUpdate /> : <Navigate to="/login" />} />
           </Routes>
         </div>
       </Router>
