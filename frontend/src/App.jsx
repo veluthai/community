@@ -10,6 +10,12 @@ import AdvancedTopics from "./components/AdvancedTopics";
 import Leaderboard from "./components/Leaderboard";
 import Games from "./components/Games";
 import GameInterface from "./components/GameInterface";
+import TechQuiz from "./components/TechQuiz";
+import QuizInterface from "./components/QuizInterface";
+import TechNews from "./components/TechNews";
+import NewsDetail from "./components/NewsDetail";
+import NewsRegistration from "./components/NewsRegistration";
+import NewsUpdate from "./components/NewsUpdate";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 
@@ -42,51 +48,17 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-
-            {/* AUTH */}
-            <Route
-              path="/"
-              element={user ? <Navigate to="/dashboard" /> : <LoginPage login={login} />}
-            />
-            <Route
-              path="/login"
-              element={user ? <Navigate to="/dashboard" /> : <LoginPage login={login} />}
-            />
-            <Route
-              path="/register"
-              element={user ? <Navigate to="/dashboard" /> : <RegisterPage register={register} />}
-            />
-
-            {/* PROTECTED PAGES */}
-            <Route
-              path="/dashboard"
-              element={user ? <Dashboard user={user} logout={logout} /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="/difficulty-levels"
-              element={user ? <DifficultyLevels /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="/coding/beginner/topics"
-              element={user ? <BeginnerTopics /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="/coding/intermediate/topics"
-              element={user ? <IntermediateTopics /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="/coding/advanced/topics"
-              element={user ? <AdvancedTopics /> : <Navigate to="/login" />}
-            />
-            <Route
-              path="/leaderboard"
-              element={user ? <Leaderboard /> : <Navigate to="/login" />}
-            />
-
-            {/* 🎮 GAMES (PUBLIC – NO LOGIN REQUIRED) */}
-            <Route path="/games" element={<Games />} />
-            <Route path="/games/:gameName" element={<GameInterface />} />
-
+            <Route path="/" element={user ? <Navigate to="/dashboard" /> : <LoginPage login={login} />} />
+            <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <LoginPage login={login} />} />
+            <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <RegisterPage register={register} />} />
+            <Route path="/dashboard" element={user ? <Dashboard user={user} logout={logout} /> : <Navigate to="/login" />} />
+            <Route path="/difficulty-levels" element={user ? <DifficultyLevels /> : <Navigate to="/login" />} />
+            <Route path="/coding/beginner/topics" element={user ? <BeginnerTopics /> : <Navigate to="/login" />} />
+            <Route path="/coding/intermediate/topics" element={user ? <IntermediateTopics /> : <Navigate to="/login" />} />
+            <Route path="/coding/advanced/topics" element={user ? <AdvancedTopics /> : <Navigate to="/login" />} />
+            <Route path="/leaderboard" element={user ? <Leaderboard /> : <Navigate to="/login" />} />
+            <Route path="/games" element={user ? <Games /> : <Navigate to="/login" />} />
+            <Route path="/games/:gameName" element={user ? <GameInterface /> : <Navigate to="/login" />} />
           </Routes>
         </div>
       </Router>

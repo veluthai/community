@@ -61,6 +61,11 @@ function Dashboard({ user, logout }) {
       navigate('/leaderboard');
     } else if (feature.title === 'Games') {
       navigate('/games');
+    } else if (feature.title === 'Tech News') {
+      navigate('/tech-news');
+    }
+     else if (feature.title === 'Tech Quiz') {
+      navigate('/tech-quiz');
     }
     // Add navigation for other features as needed
   };
