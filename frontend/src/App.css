@@ -1185,3 +1185,1190 @@
     max-width: 300px;
   }
 }
+/* =========================
+   COMMON GAME LAYOUT
+========================= */
+.dark-bg {
+  background: #0f172a;
+  min-height: 100vh;
+  color: #e5e7eb;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.back-button, .back-btn {
+  background: transparent;
+  border: none;
+  color: #60a5fa;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.level {
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* =========================
+   OPTIONS / BUTTONS
+========================= */
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.option-btn,
+.option-card {
+  background: #1e293b;
+  border: 2px solid transparent;
+  padding: 14px;
+  border-radius: 12px;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+
+.option-btn:hover,
+.option-card:hover {
+  transform: scale(1.03);
+  border-color: #38bdf8;
+}
+
+.option-btn.correct,
+.option-card.correct {
+  background: #16a34a;
+  border-color: #22c55e;
+}
+
+.option-btn.wrong,
+.option-card.wrong {
+  background: #dc2626;
+  border-color: #ef4444;
+}
+
+/* =========================
+   STATUS / SCORE
+========================= */
+.status, .score, .fib-stats {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* =========================
+   WORD PUZZLE / SCRAMBLE
+========================= */
+.letters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.letter-box,
+.letter-btn {
+  width: 55px;
+  height: 55px;
+  background: #334155;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answer-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.answer-tile {
+  width: 55px;
+  height: 55px;
+  background: #0ea5e9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+
+/* =========================
+   INPUT AREA
+========================= */
+.input-area,
+.fib-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 220px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   MEMORY / MATCHING
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tile,
+.card {
+  background: #334155;
+  border-radius: 12px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.tile.active,
+.card.flipped {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* =========================
+   DIALOGUE GAME
+========================= */
+.chat-row {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.chat-row.left {
+  justify-content: flex-start;
+}
+
+.chat-row.right {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 14px;
+  border-radius: 14px;
+  background: #1e293b;
+}
+
+.chat-bubble.question {
+  border-bottom-left-radius: 0;
+}
+
+.chat-bubble.answer {
+  background: #2563eb;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.avatar {
+  font-size: 26px;
+  margin: 0 10px;
+}
+
+/* =========================
+   SLIDES
+========================= */
+.progress-bar {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* =========================
+   POPUP / WIN
+========================= */
+.win-screen,
+.popup-overlay {
+  background: #020617;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+.success {
+  color: #22c55e;
+  text-align: center;
+}
+
+.error {
+  color: #ef4444;
+  text-align: center;
+}
+/* ===============================
+   WORD PUZZLE – DARK THEME UI
+================================ */
+
+.word-game {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.word-game .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #cfcfcf;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* TITLE */
+.word-game .title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.word-game .level {
+  font-size: 18px;
+  color: #b5b5b5;
+  margin-bottom: 30px;
+}
+
+/* LETTER BOXES */
+.word-game .letters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.word-game .letter-box {
+  width: 55px;
+  height: 55px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ff9f1c;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.7);
+}
+
+/* HINT */
+.word-game .hint {
+  color: #9ca3af;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* INPUT + BUTTON */
+.word-game .input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.word-game input {
+  width: 260px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.word-game input::placeholder {
+  color: #8b8b8b;
+}
+
+.word-game button {
+  background: #ff9f1c;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.word-game button:hover {
+  background: #ffb347;
+}
+
+/* SCORE */
+.word-game .score {
+  color: #4ade80;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* FEEDBACK */
+.word-game .success {
+  color: #22c55e;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.word-game .error {
+  color: #ef4444;
+  font-size: 18px;
+  margin-top: 10px;
+}
+/* ===============================
+   FILL IN THE BLANKS – DARK UI
+================================ */
+
+.fib-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* TITLE */
+.fib-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.fib-level {
+  font-size: 18px;
+  color: #b5b5b5;
+  margin-bottom: 40px;
+}
+
+/* QUESTION */
+.fib-question {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* HINT */
+.fib-hint {
+  font-size: 16px;
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+/* INPUT + BUTTON */
+.fib-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.fib-input input {
+  width: 280px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.fib-input input::placeholder {
+  color: #8b8b8b;
+}
+
+.fib-input button {
+  background: #ff9f1c;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.fib-input button:hover {
+  background: #ffb347;
+}
+
+/* TIMER */
+.fib-timer {
+  color: #b5b5b5;
+  margin-bottom: 20px;
+}
+
+/* FEEDBACK */
+.correct {
+  color: #22c55e;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.wrong {
+  color: #ef4444;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* SCORE + ATTEMPTS */
+.fib-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.fib-stats span:first-child {
+  color: #4ade80;
+}
+
+.fib-stats span:last-child {
+  color: #b5b5b5;
+}
+/* ===============================
+   MATCHING PAIRS – DARK UI
+================================ */
+
+.match-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BACK BUTTON */
+.match-wrapper .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* TITLE */
+.match-wrapper .title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.match-wrapper .level {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* TIMER + STATS */
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.stats span:first-child {
+  color: #22c55e; /* timer green */
+}
+
+.stats span:nth-child(2) {
+  color: #eab308; /* moves */
+}
+
+.stats span:last-child {
+  color: #4ade80; /* score */
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* CARD FRONT */
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2b3a50;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: bold;
+  color: #facc15;
+  backface-visibility: hidden;
+}
+
+/* CARD BACK */
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #6ea8ff, #4f7edb);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* GAME OVER */
+.match-wrapper h1 {
+  margin-top: 80px;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.actions button {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background: #22c55e;
+  color: #000;
+}
+
+.actions button:last-child {
+  background: #f97316;
+  color: #000;
+}
+/* ===============================
+   SPELLING GAME – DARK UI
+================================ */
+
+.spelling-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BACK BUTTON */
+.spelling-wrapper .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* TITLE */
+.spelling-wrapper .title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.spelling-wrapper .level {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* TIMER + SCORE */
+.spelling-wrapper .status {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #4ade80;
+}
+
+/* HINT */
+.spelling-wrapper .hint {
+  color: #9ca3af;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* OPTIONS GRID */
+.spelling-wrapper .options {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* OPTION CARD */
+.option-card {
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.option-card:hover {
+  background: #374151;
+}
+
+/* CORRECT */
+.option-card.correct {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* WRONG */
+.option-card.wrong {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* GAME OVER */
+.win-screen {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-screen h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.win-screen h2 {
+  color: #22c55e;
+}
+
+.win-screen .actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.win-screen button {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.win-screen button:first-child {
+  background: #22c55e;
+  color: #000;
+}
+
+.win-screen button:last-child {
+  background: #f97316;
+  color: #000;
+}
+/* ===============================
+   WORD SCRAMBLE – DARK UI
+================================ */
+
+.word-scramble {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BACK BUTTON */
+.word-scramble .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* TITLE */
+.word-scramble .title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.word-scramble .level {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 18px;
+}
+
+/* TOP INFO */
+.word-scramble .top-info {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.word-scramble .top-info span {
+  color: #4ade80;
+}
+
+/* HINT */
+.word-scramble .hint {
+  color: #9ca3af;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* ANSWER BOX */
+.answer-box.big {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.answer-tile.big {
+  width: 60px;
+  height: 60px;
+  background: #111827;
+  border-radius: 12px;
+  border: 2px solid #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fbbf24;
+}
+
+/* LETTER BUTTONS */
+.letters.big {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.letter-btn.big {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #1f2937;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.letter-btn.big:hover {
+  background: #374151;
+  transform: scale(1.05);
+}
+
+/* SUBMIT BUTTON */
+.submit-btn.big {
+  background: linear-gradient(135deg, #f59e0b, #fb923c);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.submit-btn.big:hover {
+  opacity: 0.9;
+}
+
+/* MESSAGE */
+.word-scramble .message {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.word-scramble .message.success {
+  color: #22c55e;
+}
+
+.word-scramble .message.error {
+  color: #ef4444;
+}
+
+/* SCORE */
+.word-scramble .score {
+  color: #4ade80;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* GAME OVER */
+.win-screen {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-screen h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.win-screen h2 {
+  color: #22c55e;
+}
+
+.win-screen .actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.win-screen button {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.win-screen button:first-child {
+  background: #22c55e;
+  color: #000;
+}
+
+.win-screen button:last-child {
+  background: #f97316;
+  color: #000;
+}
+/* ===============================
+   MEMORY GAME – DARK UI
+================================ */
+
+.memory-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  color: #ffffff;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BACK BUTTON */
+.memory-wrapper .back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* INTRO SCREEN */
+.game-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.game-intro .icon {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.game-intro h1 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.game-intro p {
+  color: #9ca3af;
+  margin-bottom: 30px;
+}
+
+.start-game-btn {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  border: none;
+  padding: 14px 34px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.start-game-btn:hover {
+  opacity: 0.9;
+}
+
+/* PLAY SCREEN */
+.play-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.play-screen h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* TIMER */
+.game-timer {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.game-timer span {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 420px;
+}
+
+/* TILE */
+.tile {
+  width: 90px;
+  height: 90px;
+  background: #111827;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  cursor: pointer;
+  border: 2px solid #1f2937;
+  transition: all 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile.active {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: #fff;
+  border-color: #3b82f6;
+}
+
+/* WIN SCREEN */
+.win-screen {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1c1c1c, #050505);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* CONFETTI LAYER */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* WIN TEXT */
+.win-screen h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.win-screen .quote {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.win-screen .quote span {
+  display: block;
+  color: #fbbf24;
+  margin-top: 6px;
+}
+
+/* ACTION BUTTONS */
+.win-screen .actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.win-screen button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.win-screen button:first-child {
+  background: #22c55e;
+  color: #000;
+}
+
+.win-screen button:last-child {
+  background: #f97316;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tile {
+    width: 80px;
+    height: 80px;
+  }
+}
